@@ -33,9 +33,12 @@ export const parse = (text: string, options?: fxmlOptions) => {
     }
 
     const parseFreeTextBody = (): string => {
-        let start = pos;
-        while (text.length >= pos && text.charCodeAt(pos) !== openCornerBrackerCC) {
-            pos++;
+        const start = pos;
+        const end = text.indexOf("<", pos);
+        if (end === -1) {
+            pos = text.length + 1;
+        } else {
+            pos = end;
         }
         return text.slice(start, pos);
     }

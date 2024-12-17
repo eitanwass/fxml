@@ -708,15 +708,15 @@ const sampleXML = `<root>
 </listing>
 </root>`;
 
-// console.time("txml");
-// txml.parse(sampleXML, {simplify: true});
-// console.timeEnd("txml");
+console.time("txml");
+const resTxml = txml.parse(sampleXML, {simplify: true});
+console.timeEnd("txml");
 
 
-// console.time("fxml");
-console.profile();
+console.time("fxml");
+// console.profile();
 const res = parse(sampleXML);
-console.profileEnd();
-// console.timeEnd("fxml");
+// console.profileEnd();
+console.timeEnd("fxml");
 
 // console.log(JSON.stringify(res, undefined, 2));
