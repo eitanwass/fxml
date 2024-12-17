@@ -47,8 +47,9 @@ export const parse = (text: string, options?: fxmlOptions) => {
         return text.slice(stringStartPos, pos);
     }
 
-    const parseTag = () => {
+    const parseTag = (parentTagName: string) => {
         let parsed: Record<string, any> = {};
+        let stringChild: string | undefined = undefined;
         let putasideChild = undefined;
         while(text.length >= pos) {
             if (text.charCodeAt(pos) === openCornerBrackerCC) {
@@ -60,9 +61,17 @@ export const parse = (text: string, options?: fxmlOptions) => {
                     if (expectedCloseTagName !== closeTagName) {
                         throw new Error(`Closing tag ${closeTagName} doesn't match opening tag ${expectedCloseTagName}`);
                     }
-                    console.log(`finished parsing ${closeTagName}`);
                     pos++;
-                    return parsed;
+                    if (closeTagName === parentTagName) {
+                        if (stringChild !== undefined && Object.keys(parsed).length !== 0) {
+                            throw new Error(`Free text body must be the only child of ${parentTagName} tag`);
+                        }
+                        // console.log(`finished parsing ${closeTagName}`);
+                        if (stringChild !== undefined) {
+                            return stringChild;
+                        }
+                        return parsed;
+                    }
                 } else if (text.charCodeAt(pos + 1) === exclamationCC) {
                     // comment
                 } else {
@@ -127,7 +136,7 @@ export const parse = (text: string, options?: fxmlOptions) => {
                     if (text.charCodeAt(pos - 1) !== slashCC) {
                         // Open node
                         pos++;
-                        children = parseTag();
+                        children = parseTag(tagName);
                         if (typeof children === "string") {
                             // If context is string, ignore attributes
                             parsed[tagName] = children;
@@ -140,16 +149,17 @@ export const parse = (text: string, options?: fxmlOptions) => {
                         // Return the other children with that tagName, if exist
                         if (putasideChild !== undefined)
                             parsed[tagName] = [...putasideChild, parsed[tagName]];
-                        console.log(tagName, children, pos, text[pos])
+                        // console.log(tagName, children, pos, text[pos])
                     } else {
                         // No body
-                        console.log(`finished parsing ${tagPath.pop()} (no body)`);
+                        const closedTag = tagPath.pop();
+                        // console.log(`finished parsing ${closedTag} (no body)`);
                         pos++;
                     }
                 }
             }
-            else if (isTextChar(text.charCodeAt(pos))) {
-                return parseFreeTextBody().trim();
+            else if (tagNameEnders.indexOf(text[pos]) === -1) {
+                stringChild = parseFreeTextBody().trim();
             } else {
                 pos++;
             }
@@ -159,5 +169,5 @@ export const parse = (text: string, options?: fxmlOptions) => {
     }
 
 
-    return parseTag();
+    return parseTag("");
 };
