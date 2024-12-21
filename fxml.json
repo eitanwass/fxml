@@ -1,0 +1,18 @@
+{
+  "root": {
+    "_attributes": {},
+    "firstChild": {
+      "_attributes": {},
+      "grandchild": {
+        "_attributes": {}
+      }
+    },
+    "child": "content",
+    "another": {
+      "_attributes": {},
+      "deep": {
+        "_attributes": {}
+      }
+    }
+  }
+}

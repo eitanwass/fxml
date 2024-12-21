@@ -1,0 +1,413 @@
+{
+  "root": {
+    "listing": [
+      {
+        "seller_info": {
+          "seller_name": "jenzen12",
+          "seller_rating": "new"
+        },
+        "payment_types": "Accepts Credit Cards (MC, VISA)",
+        "shipping_info": "* Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$310.00",
+          "time_left": "4 days",
+          "high_bidder": {
+            "bidder_name": "mike_and_colleen",
+            "bidder_rating": "1"
+          },
+          "num_items": "5",
+          "num_bids": "27",
+          "started_at": "$10.00",
+          "bid_increment": "$5.00",
+          "location": "Costa Meca, CA",
+          "opened": "Nov 27 00:24 PST",
+          "closed": "Dec 02 10:24 PST",
+          "id_num": "45519743",
+          "notes": "Seller can close auction early.\n            * Auction may get automatically extended"
+        },
+        "bid_history": {
+          "highest_bid_amount": "$310.00",
+          "quantity": "1"
+        },
+        "item_info": {
+          "memory": "128MB RDRAM",
+          "hard_drive": "40GB Ultra ATA Hard Drive (7200RPM)",
+          "cpu": "Pentium III",
+          "brand": "Dell Dimension 8100 Series",
+          "description": "Dell's NEW\n            Dimension features\n            the Intel\n            Pentium 4\n            Processor! With\n            leading edge\n            performance and a\n            brand new\n            computing\n            architecture, this\n            system is designed\n            for speed and power\n            so you can enjoy the\n            latest in audio,\n            video, and Internet\n            technologies."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "webaxion",
+          "seller_rating": "31"
+        },
+        "payment_types": "Accepts Yahoo! PayDirect\n         * Accepts Personal Checks\n         * Accepts Cashiers Checks and Money\n         Orders\n         * Accepts Credit Cards (MC, VISA)",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$53.50",
+          "time_left": "1 day",
+          "high_bidder": {
+            "bidder_name": "eldrdge1",
+            "bidder_rating": "new"
+          },
+          "num_items": "1",
+          "num_bids": "4",
+          "started_at": "$20.00",
+          "bid_increment": "$2.50",
+          "location": "Charlotte, NC",
+          "opened": "Nov 23 05:57\n            PST",
+          "closed": "Nov 29 05:57\n            PST",
+          "id_num": "45245937",
+          "notes": "Seller can close auction early.\n            * Auction does not get automatically\n            extended."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "",
+          "hard_drive": "",
+          "cpu": "",
+          "brand": "",
+          "description": "Visioneer Strobe Pro NT integrates the most advanced paper management\n            software\n            with our unique compact sheet fed color scanner. The result is the ideal solution for\n            streamlining information that makes it easy to find what you're looking for- even if you\n            don't remember where you put it. With our Paper-driven? technology, you just feed in\n            your color or black and white documents or images; Visioneer Strobe Pro NT\n            automatically launches the PaperPort Deluxe software, and places your documents and\n            images on the PaperPort desktop. and images on the PaperPort desktop."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "kriisvs",
+          "seller_rating": "19"
+        },
+        "payment_types": "Accepts Cashiers Checks and\n         Money Orders\n         * Accepts Credit Cards (MC,\n         VISA)",
+        "shipping_info": "Seller Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$2.99",
+          "time_left": "4 hrs",
+          "high_bidder": {
+            "bidder_name": "wnba088",
+            "bidder_rating": "1"
+          },
+          "num_items": "999",
+          "num_bids": "5",
+          "started_at": "$2.99",
+          "bid_increment": "$0.10",
+          "location": "Haliburton, Ontario CA",
+          "opened": "Nov 25 18:09 PST",
+          "closed": "Nov 27 18:09 PST",
+          "id_num": "45416810",
+          "notes": "Auction does not get automatically extended.\n            * Seller will ship internationally."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "",
+          "hard_drive": "",
+          "cpu": "",
+          "brand": "",
+          "description": ""
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "boy1der_1998",
+          "seller_rating": "5"
+        },
+        "payment_types": "Accepts Yahoo! PayDirect\n         * Accepts Personal Checks\n         * Accepts Cashiers Checks and Money\n         Orders",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "* Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$1,334.00",
+          "time_left": "2 days",
+          "high_bidder": {
+            "bidder_name": "",
+            "bidder_rating": ""
+          },
+          "num_items": "5",
+          "num_bids": "0",
+          "started_at": "$1,334.00",
+          "bid_increment": "$10.00",
+          "location": "Charleston, SC",
+          "opened": "Nov 19 15:00\n            PST",
+          "closed": "Nov 19 15:00\n            PST",
+          "id_num": "44993324",
+          "notes": "Seller can close auction early.\n            * Auction may get automatically\n            extended."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "128 MB PC-100 SDRam",
+          "hard_drive": "20 GB 7200 RPM Hard\n            Drive",
+          "cpu": "Intel Pentium III 800 MHz CPU",
+          "brand": "",
+          "description": "Intel Pentium III 800 MHz CPU * 128 MB PC-100 SDRam * 20 GB 7200 RPM Hard\n            Drive * 56K Soft Modem * 16X DVD/40X CD-Rom Drive * Built on Sound and Video\n            * Keyboard, Mouse and Speakers * Windows 98 or ME 17\" AOC 3 year Warranty\n            Monitor 1 year 24 x 7 ON Site Warranty-Nationwide Shipping and Handling is an\n            addional: $75.00 for UPS Ground. Faster services are availible. ALL Personal Checks\n            must Clear First."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "coronasystems",
+          "seller_rating": "12"
+        },
+        "payment_types": "Accepts Personal Checks\n         * Accepts Cashiers Checks and Money\n         Orders\n         * Accepts Credit Cards (MC, VISA)",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$120.25",
+          "time_left": "2 days",
+          "high_bidder": {
+            "bidder_name": "turaxm",
+            "bidder_rating": "3"
+          },
+          "num_items": "3",
+          "num_bids": "23",
+          "started_at": "$1.00",
+          "bid_increment": "$5.00",
+          "location": "Bridgeport, WV",
+          "opened": "Nov 21 13:07\n            PST",
+          "closed": "Nov 29 15:07\n            PST",
+          "id_num": "45128630",
+          "notes": "Auction may get automatically\n            extended."
+        },
+        "bid_history": {
+          "highest_bid_amount": "$120.25",
+          "quantity": "1"
+        },
+        "item_info": {
+          "memory": "",
+          "hard_drive": "",
+          "cpu": "Pentium III FCPGA",
+          "brand": "",
+          "description": "How would you like a Custom Built System?\n            Built in our labs by Industry Certified Engineers and\n            Technicians\n            Backed by a full year warranty.\n            System Details\n            Name brand motherboard\n            Pentium III FCPGA Motherboard - Supports up to 1064\n            MHz Processor\n            Can be upgraded !\n\n            32MB AGP Video Card\n            System Sdram video\n            Up to 64 MB AGP 4X Video!\n            Can be upgraded !\n\n            3D Sound Included!\n            Support for up to 4 speakers\n            Can be upgraded to SoundBlaster Live!\n\n            56K V.90 FaxModem\n            Send faxes or connect online.\n            See below for special web hosting free gift !\n\n            Case and Power Supply\n\n            PS/2 Ports\n            USB Ports\n\n            Drive cables\n\n\n            Drivers Disk and Software\n\n            What your bid gets you:\n            The System above\n\n            Free design assistance from our certified\n            staff\n            Not sure what you need?\n            Not a computer whiz?\n            Don't know a megabyte from a gigabyte?\n\n            Don't worry - we'll assist you at each step.\n\n            Build your system - the way you want it.\n            We help you with the design, and then we\n            construct it for you.\n            Free.\n\n            All design and labor costs are included in the\n            base unit.\n\n            You choose the upgrades you want at\n            wholesale prices!\n            And we install them free!"
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "lizjb40",
+          "seller_rating": "69"
+        },
+        "payment_types": "Accepts Personal Checks\n         * Accepts Cashiers Checks and\n         Money Order",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$180.00",
+          "time_left": "2 days",
+          "high_bidder": {
+            "bidder_name": "salaam624",
+            "bidder_rating": "1"
+          },
+          "num_items": "1",
+          "num_bids": "1",
+          "started_at": "$180.00",
+          "bid_increment": "$5.00",
+          "location": "Colonial Beach, VA",
+          "opened": "Nov 26 14:03 PST",
+          "closed": "Nov 29 19:03 PST",
+          "id_num": "45471155",
+          "notes": "seller can close auction early.\n            * Auction may get automatically extended."
+        },
+        "bid_history": {
+          "highest_bid_amount": "$180.00",
+          "quantity": "1"
+        },
+        "item_info": {
+          "memory": "",
+          "hard_drive": "",
+          "cpu": "800 MHz/ Intel Penntium III Processor",
+          "brand": "",
+          "description": "You are bidding on a RETAIL BOX INTEL PENNTIUM III 800 MHz/133 MHz\n            System Bus CPU. Intel Penntium III Processor Product Features: 800MHZ Processor\n            Core Speed - 133-MHz System Bus - 256KB On-Die Full-Speed L2 Cache - MMX\n            Media Enhancement Technology - Fan Heatsink - All sales are final. I will shipp to\n            the 48 United States, states ONLY! I will accept personal checks or Money Order for\n            this item, however, I will hold shipment of the item for 6 days until the check clears\n            the\n            banks and Money Orders ship same day. As for shpping charges - $6.50 S&amp;H and\n            Insurance."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "nex_gen_computers",
+          "seller_rating": "1"
+        },
+        "payment_types": "Accepts Personal Checks\n         * Accepts Cashiers Checks and Money Orders",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$215.00",
+          "time_left": "4 days",
+          "high_bidder": {
+            "bidder_name": "",
+            "bidder_rating": ""
+          },
+          "num_items": "1",
+          "num_bids": "6",
+          "started_at": "$5.00",
+          "bid_increment": "$1.00",
+          "location": "Los Angeles Ca",
+          "opened": "Nov 25 10:46 PST",
+          "closed": "Dec 02 10:46 PST",
+          "id_num": "44885977",
+          "notes": "Auction does not get automatically\n            extended.\n            * Auction has a reserve price that has not\n            been met."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "64MB SyncDRAM (up to 768MB)",
+          "hard_drive": "6.4GB HDD (Ultra DMA EIDE)",
+          "cpu": "Celeron 466MHz",
+          "brand": "Compaq Presario 5700 minitower",
+          "description": "With a powerful Intel Celeron? 466MHz (w/128KB L2 Cache) processor the\n            Presario\n            5700 is good for everything. You can watch movies, play powerful games, browse the\n            Internet at the highest speed available, do your everyday tasks, this computer is good\n            at\n            all this. It comes standard with a built-in 24x CD-ROM, huge 6.4GB hard drive (you\n            will probably never use it all), internal 56K V.90 PCI Fax/Modem. This is a good\n            advanced system, which is going to last forever. You can count on 5 and more years of\n            work, there's plenty of 5 and more years old Compaqs that are still in use. Besides,\n            Compaq has a very good technical support, so you won't have any problems looking for\n            the drivers, for example. You can also order the quick restore CD, Compaq sends those\n            for free."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "deg76",
+          "seller_rating": "2"
+        },
+        "payment_types": "Accepts Yahoo! PayDirect\n         * Accepts Personal Checks\n         * Accepts Cashiers Checks and\n         Money Orders\n         * Accepts Credit Cards (MC, VISA)",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "799.00",
+          "time_left": "5 days",
+          "high_bidder": {
+            "bidder_name": "",
+            "bidder_rating": ""
+          },
+          "num_items": "1",
+          "num_bids": "0",
+          "started_at": "$799.00",
+          "bid_increment": "$10.00",
+          "location": "Winchester, VA",
+          "opened": "Nov 24 16:28 PST",
+          "closed": "Dec 02 16:28 PST",
+          "id_num": "45337675",
+          "notes": "Seller can close auction early.\n            * Auction may get automatically extended.\n            * There is a buy price on this auction of\n            $999.00."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "64 Meg Ram",
+          "hard_drive": "10 Gig HD",
+          "cpu": "Pentium III 650 MHZ Cpu",
+          "brand": "",
+          "description": "Pentium III 650 MHZ Cpu NEW SYSTEM ATX Mid Tower 50X CDROM 10 Gig HD\n            64 Meg Ram 8 Meg Video 56K Modem Sound 2 USB Ports Ethernet 10/100 Keyboard,\n            Mouse, Speakers 15\" Monitor 1 Year Parts and Labor E-Mail deg@shentel.net with\n            address for exact shipping charges. Ships using UPS."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "mertztech",
+          "seller_rating": "1"
+        },
+        "payment_types": "Accepts Personal Checks",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$315.00",
+          "time_left": "8 days",
+          "high_bidder": {
+            "bidder_name": "abestseller",
+            "bidder_rating": "4"
+          },
+          "num_items": "1",
+          "num_bids": "8",
+          "started_at": "$95.00",
+          "bid_increment": "$5.00",
+          "location": "Williamsville, NY",
+          "opened": "Nov 25 12:01 PST",
+          "closed": "Dec 05 18:01 PST",
+          "id_num": "45045404",
+          "notes": "Auction does not get automatically\n            extended.\n            * There is a buy price on this auction of\n            $599.95."
+        },
+        "bid_history": {
+          "highest_bid_amount": "$315.00",
+          "quantity": "1"
+        },
+        "item_info": {
+          "memory": "64MB SDRAM Memory",
+          "hard_drive": "20GB Quantum Fireball IDE Hard Drive",
+          "cpu": "Intel Pentium III 800MHz Processor",
+          "brand": "",
+          "description": "This is an incredible, brand new system just for you.\n            Shipping &amp; Handling is $49.00 and paid for by the buyer.\n            An e-mail will be sent upon receipt of payment. UPS\n            Ground is method of shipping.\n            PayPal is accepted!\n            Personal checks, cashiers checks and money orders are\n            accepted.\n            All auction sales are final.\n            New York state residence add 8% sales tax.\n            Payment must be received within 5 days from close of\n            auction.\n            Allow 3-10 business days to process order and configure\n            system after payment is received.\n            One year parts and labor warranty as provided for by\n            manufacturer. Seller will replace defective parts at sellers\n            option.\n            I understand and agree: If I do not pay and send my\n            payment within 7 days after auction closing, all necessary\n            costs will be forwarded to a collection agency; a 20%\n            restocking fee is assessed for all equipment; I cannot\n            return the product(everything listed above) after 30 days\n            of purchase.\n            30 Day warrenty. Manufacturer warrenty apply.\n            If you have any questions regarding this purchase please\n            e-mail us at jeff@mertztech.com."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "o\n            econgo1",
+          "seller_rating": "new"
+        },
+        "payment_types": "Accepts Yahoo! PayDirect\n         * Accepts Personal Checks\n         * Accepts Cashiers Checks and Money\n         Orders",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$1,500.00",
+          "time_left": "3 days",
+          "high_bidder": {
+            "bidder_name": "",
+            "bidder_rating": ""
+          },
+          "num_items": "1",
+          "num_bids": "0",
+          "started_at": "$1,500.00",
+          "bid_increment": "$10.00",
+          "location": "Tupelo, MS",
+          "opened": "Nov 26 11:54\n            PST",
+          "closed": "Dec 01 11:54\n            PST",
+          "id_num": "45463230",
+          "notes": "Seller can close auction early.\n            * Auction may get automatically\n            extended.\n            * Seller will ship internationally"
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "128MB RDRAM,",
+          "hard_drive": "40GB\n            Ultra ATA Hard Drive",
+          "cpu": "Intel Pentium III Processor at 1Ghz,",
+          "brand": "",
+          "description": "(Your Computer Will Look Similar To The One Shown) This New Computer System\n            comes with a blazing Intel Pentium III Processor at 1Ghz, 128MB RDRAM,40GB\n            Ultra ATA Hard Drive,Sound Blaster Live! +MP3,Creative Labs Annihilator 2\n            GeForce2 AGP Graphic Card, 19\" Monitor, Creative Labs PC-DVD Encore 12X DVD,\n            Microsoft Windows ME Operating System and A 3-Yr. Parts &amp; Labor Warranty. Ask\n            for the new Pentium IV Processor at 1.4 &amp; 1.5GHz! If you have any questions please\n            e-mail me or send me an instant message."
+        }
+      },
+      {
+        "seller_info": {
+          "seller_name": "cbear_net",
+          "seller_rating": "1"
+        },
+        "payment_types": "Accepts Yahoo! PayDirect\n         * Accepts Cashiers Checks and Money\n         Orders\n         * Accepts Credit Cards (MC, VISA)",
+        "shipping_info": "Buyer Pays Shipping\n         * Seller Ships on Payment",
+        "buyer_protection_info": "Standard Protection Coverage",
+        "auction_info": {
+          "current_bid": "$289.00",
+          "time_left": "1 day",
+          "high_bidder": {
+            "bidder_name": "",
+            "bidder_rating": ""
+          },
+          "num_items": "5",
+          "num_bids": "0",
+          "started_at": "$289.00",
+          "bid_increment": "$5.00",
+          "location": "Federal Way, WA",
+          "opened": "Nov 26 13:56 PST",
+          "closed": "Nov 28 13:56 PST",
+          "id_num": "44998107",
+          "notes": "Auction does not get automatically\n            extended."
+        },
+        "bid_history": {
+          "highest_bid_amount": "",
+          "quantity": ""
+        },
+        "item_info": {
+          "memory": "",
+          "hard_drive": "",
+          "cpu": "Intel Pentium III CPU",
+          "brand": "",
+          "description": "Upgrade your system with Intel Pentium III CPU. QUICK GLANCE :This Product is\n            brand new and pre-assembled! - Intel Pentium III 533MHz CPU and Heatsink - Intel\n            SpeedStep Technology - Slot 1- 133MHz/256k - ASUS P3V4X JumperFree AGP/4X\n            Motherboard - 133MHZ/100MHZ FSB &amp; PC133 SDRAM support - Coppermine\n            CPU Support - DMA/66 Ready - PC133 64M SDRAM 168 Pins 7 ns Memory The\n            Intel Pentium III processor offers great performance for today's and tomorrow's\n            applications, as well as quality, reliability, and compatibility from the world's\n            leading\n            microprocessor company. Intel's latest Pentium III processors are manufactured using\n            the advanced 0.18-micron process. This new generation of technology brings all the\n            performance-enhancing features of the Pentium III processor into exciting new PC\n            products. Available for both desktop and mobile users, the redesigned Pentium III\n            processor with Advanced Transfer Cache means you have all the power and\n            performance for today's and tomorrow's Internet applications. Mobile Pentium III\n            processor featuring Intel SpeedStep technology lets you command the power of the\n            Internet anytime, anywhere. For the Desktop, The Intel Pentium III processor is now\n            available at up to 1.13 GHz. - FOR CONSUMERS Unleash the full multimedia\n            capabilities of your Performance PC with the Pentium III processor -- including\n            full-screen, full-motion video and realistic graphics for an enhanced, exciting Internet\n            experience. With the new mobile Pentium III processor, take outstanding performance\n            with you wherever you go! - FOR BUSINESS The Pentium III processor sets a new\n            baseline for high-performance business desktop computing, and is also available for\n            entry-level workstations and servers. And now, the new mobile Pentium III processor\n            enables greater productivity on the go. - FOR DEVELOPERS Find the software, tools\n            and technical information you need to optimize the power of the Pentium III processor.\n            ** ** Warranty: 3 Months functional defect exchange warranty. ** The warranty of\n            CPU, Memory and Mother board that have been mishandled or damaged is voided.\n            Only those items that are determined to be free from damage will be exchanged or\n            refunded. ************************** Buyer Pay $12.99 Shipping inside US via\n            UPS. **** Shipping fees, return shipping costs are Non-Refundable. Physical damaged\n            by improper handling or installation will not be honored. Support: Fax us 253 946-5719\n            or email Cbear@cbear.net. Visit our website www.cbear.net for other products."
+        }
+      }
+    ]
+  }
+}
