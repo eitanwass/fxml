@@ -123,6 +123,31 @@ static v8::Local<v8::Value> walk(const Options &options, const rapidxml::xml_nod
       collected += trim(std::string(node->value()));
     else if (t == rapidxml::node_cdata)
       collected += std::string(node->first_node()->value());
+    else if (t == rapidxml::node_comment)
+    {
+      if (len == 0)
+        ret = Nan::New<v8::Object>();
+      std::string prop = n->name();
+      if (!options.preserveCase)
+        toLower(prop);
+      v8::Local<v8::Value> obj = parseText(options, trim(std::string(n->value())));
+      v8::Local<v8::Object> myret = v8::Local<v8::Object>::Cast(ret);
+
+      v8::Local<v8::String> key = Nan::New<v8::String>(prop).ToLocalChecked();
+      if (Nan::HasOwnProperty(myret, key).FromJust())
+      {
+        v8::Local<v8::Value> arr = Nan::Get(myret, Nan::New<v8::String>(prop).ToLocalChecked()).ToLocalChecked();
+        v8::Local<v8::Array> a = v8::Local<v8::Array>::Cast(arr);
+        Nan::Set(a, a->Length(), obj);
+      }
+      else
+      {
+        v8::Local<v8::Array> a = Nan::New<v8::Array>();
+        Nan::Set(a, 0, obj);
+        Nan::Set(myret, key, a);
+        ++len;
+      }
+    }
     else if (t == rapidxml::node_element)
     {
       if (len == 0)
@@ -251,12 +276,12 @@ static bool parseArgs(const Nan::FunctionCallbackInfo<v8::Value> &args, Options 
   }
   else
   {
-    options.emptyTagValue = Nan::New<v8::Boolean>(true);
-    options.groupAttributes = false;
+    options.emptyTagValue = Nan::Null();
+    options.groupAttributes = true;
     options.parseBoolean = true;
     options.parseDouble = true;
     options.parseInteger = true;
-    options.preserveCase = false;
+    options.preserveCase = true;
     options.explicitArray = false;
     options.ignoreAttributes = false;
     options.attributePrefix = "@";
@@ -280,7 +305,7 @@ NAN_METHOD(parse)
   rapidxml::xml_document<char> doc;
   try
   {
-    doc.parse<0>(*xml);
+    doc.parse<0x40>(*xml);
   }
   catch (rapidxml::parse_error &)
   {
@@ -296,91 +321,6 @@ NAN_METHOD(parse)
     info.GetReturnValue().Set(obj);
     return;
   }
-
-  info.GetReturnValue().SetUndefined();
-}
-
-class AsyncParser : public Nan::AsyncWorker
-{
-public:
-  AsyncParser(Nan::Callback *callback, Nan::Utf8String *xml, std::unique_ptr<Options> &&options)
-  : Nan::AsyncWorker(callback)
-  , m_xml(xml)
-  , m_options(std::move(options))
-  {
-    m_options->SaveToPersistent(this);
-  }
-
-  ~AsyncParser()
-  {
-    delete m_xml;
-  }
-
-  virtual void Execute()
-  {
-    try
-    {
-      m_doc.parse<0>(**m_xml);
-    }
-    catch (rapidxml::parse_error &e)
-    {
-      SetErrorMessage(e.what());
-    }
-  }
-
-  virtual void HandleOKCallback()
-  {
-    m_options->LoadFromPersistent(this);
-
-    Nan::HandleScope scope;
-    v8::Local<v8::Value> val = Nan::Undefined();
-    if (m_doc.first_node())
-    {
-      if (!m_doc.first_node()->first_attribute() && !m_doc.first_node()->first_node())
-          val = Nan::New<v8::Object>();
-      else
-          val = walk(*m_options, m_doc.first_node());
-    }
-
-    v8::Local<v8::Value> argv[] =
-    {
-      Nan::Null(),
-      val
-    };
-    Nan::Call(callback->GetFunction(), Nan::GetCurrentContext()->Global(), 2, argv);
-  }
-
-private:
-  Nan::Utf8String *m_xml;
-  rapidxml::xml_document<char> m_doc;
-  std::unique_ptr<Options> m_options;
-};
-
-NAN_METHOD(parseAsync)
-{
-  std::unique_ptr<Options> options(new Options());
-
-  if (!parseArgs(info, *options))
-  {
-    info.GetReturnValue().SetUndefined();
-    return;
-  }
-
-  if (info.Length() != 3) // xml string, options object, callback
-  {
-    Nan::ThrowError("Invalid number of arguments");
-    info.GetReturnValue().SetUndefined();
-    return;
-  }
-  if (!info[2]->IsFunction())
-  {
-    Nan::ThrowError("Invalid argument; expected Function");
-    info.GetReturnValue().SetUndefined();
-    return;
-  }
-  Nan::Utf8String *xml = new Nan::Utf8String(info[0]);
-  Nan::Callback *cb = new Nan::Callback(info[2].As<v8::Function>());
-  Nan::AsyncQueueWorker(new AsyncParser(cb, xml, std::move(options)));
 
   info.GetReturnValue().SetUndefined();
 }

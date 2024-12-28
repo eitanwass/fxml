@@ -1799,6 +1799,7 @@ namespace rapidxml
 
             // Create comment node
             xml_node<Ch> *comment = this->allocate_node(node_comment);
+            comment->name("_comments");
             comment->value(value, text - value);
             
             // Place zero terminator after comment value
