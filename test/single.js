@@ -5,9 +5,8 @@ const assert = require('assert');
 
 describe('<root/>', () => {
     it('should return an empty object', done => {
-        rapidx2j.parse('<root/>', (err, json) => {
-            assert(typeof json === 'object' && json !== null && Object.keys(json) !== null);
-            done();
-        });
+        const json = rapidx2j.parse('<root/>');
+        assert(typeof json === 'object' && json !== null && Object.keys(json) !== null);
+        done();
     });
 });
