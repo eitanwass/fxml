@@ -1,6 +1,6 @@
 /// <reference types="node"/>
 
-declare var c: c.IRapidx2j;
+declare var c: c.Ifxml;
 
 declare namespace c {
     type XML = string | Buffer;
@@ -19,14 +19,10 @@ declare namespace c {
         value_key?: string;
     }
 
-    interface IRapidx2j {
+    interface Ifxml {
         parse<T extends object>(xml: XML): T;
 
         parse<T extends object>(xml: XML, options: Options): T;
-
-        parse<T extends object>(xml: XML, options: Options, callback: (err: any, result: T) => void);
-
-        parse<T extends object>(xml: XML, callback: (err: any, result: T) => void);
     }
 }
 

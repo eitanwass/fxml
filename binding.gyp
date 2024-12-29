@@ -1,9 +1,9 @@
 {
   'targets': [
     {
-      'target_name': 'rapidx2j',
+      'target_name': 'fxml',
       'sources': [
-        'src/rapidx2j.cc',
+        'src/fxml.cc',
         'src/parser.cc'
       ],
       'cflags!': [ '-fno-exceptions' ],

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(rapidx2j)
+project(fxml)
 include_directories(${CMAKE_JS_INC})
 file(GLOB SOURCE_FILES "src/*.cc")
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})

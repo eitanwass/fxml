@@ -1,14 +1,15 @@
 {
-  "name": "rapidx2j",
-  "version": "0.6.1",
-  "description": "Node.js XML to JSON using rapidXML",
+  "name": "fxml",
+  "version": "0.1.0",
+  "description": "Node.js XML to JSON",
   "main": "index.js",
   "types": "types/index.d.ts",
   "private": false,
   "gypfile": true,
   "scripts": {
-    "install": "node-gyp rebuild",
-    "test": "./node_modules/mocha/bin/mocha"
+    "clean": "rm -rf build/ node_modules/",
+    "postinstall": "npx node-gyp rebuild",
+    "test": "npx mocha"
   },
   "files": [
     "src",
