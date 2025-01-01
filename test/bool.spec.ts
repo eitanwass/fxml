@@ -8,11 +8,13 @@ describe('parse_boolean_values', () => {
     it('should parse boolean values, parse_boolean_values = true', () => {
         const oParseBool = r.parse(x, {parse_boolean_values: true});
         assert(oParseBool.c === true);
+        assert(oParseBool.d === false);
     });
 
     it('should not parse boolean values, parse_boolean_values = false', () => {
         const oNoParseBool = r.parse(x, {parse_boolean_values: false});
         assert(oNoParseBool.c === 'true');
+        assert(oNoParseBool.d === 'false');
     });
 });
 

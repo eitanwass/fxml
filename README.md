@@ -1,91 +1,44 @@
-# rapidx2j
+# fxml - fast XML
 
-[![Build Status](https://travis-ci.org/damirn/rapidx2j.svg?branch=master)](https://travis-ci.org/damirn/rapidx2j)
+This is a maintained fork of [rapidx2j](https://github.com/damirn/rapidx2j), with some changes detailed next.
 
-Node.JS module for converting XML documents into JSON objects. It is one
-of the fastest converters available. Uses [RapidXML](http://rapidxml.sourceforge.net/).
-Inspired by [fast-feed](https://github.com/rla/fast-feed).
+Node.JS module for converting XML documents into JSON objects. \
+It is one of the fastest converters available (benchmarks next). Uses [RapidXML](http://rapidxml.sourceforge.net/).
 
 ## Installation
-
-`npm install --save rapidx2j`
+`npm install --save fxml`
 
 ## Usage
+`fxml.parse(xml_string[, options]);`
 
-`x2j.parse(xml_string[, options][, callback]);`
+### Options
+| Option               | Description                                      | type                | default |
+|----------------------|--------------------------------------------------|---------------------|---------|
+| group_attrs          | Group attributes under attr_prefix dict          | boolean             | false   |
+| attr_prefix          | Prefix attributes with this text                 | string              | @       |
+| empty_tag_value      | Sets the value for empty tags                    | string \| undefined | ""      |
+| parse_boolean_values | Parses boolean values in the XML content         | boolean             | true    |
+| parse_int_values     | Parses integer numbers in the XML content        | boolean             | true    |
+| parse_float_values   | Parses floating-point numbers in the XML content | boolean             | true    |
+| ignore_attr          | Ignores attributes in the XML content            | boolean             | false   |
+| preserve_case        | Preserves the case of tag and attribute names    | boolean             | true    |
+| explicit_array       | Forces arrays to be used for repeated elements   | boolean             | false   |
+| value_key            | Specifies the key to use for the value of a tag  | string              | ""      |
 
-#### Sync
+### Examples
 
 ```javascript
-const x2j = require('rapidx2j');
-const json = x2j.parse(xml_string);
+const fxml = require('fxml');
+const json = fxml.parse(xml_string);
 console.log(json);
 ```
 
-#### Sync with optional config object:
-
-```javascript
-const x2j = require('rapidx2j');
-const options = {
-  attr_group: false,
-  attr_prefix: '@',
-  ignore_attr: false,
-  empty_tag_value: null,
-  parse_boolean_values: true,
-  parse_int_numbers: true,
-  parse_float_numbers: true,
-  preserve_case: false,
-  explicit_array: false,
-  skip_parse_when_begins_with: '',
-  value_key: 'keyValue'
-};
-const json = x2j.parse(xml_string, options);
-console.log(json);
-```
-
-#### Async with callback
-
-```javascript
-const x2j = require('rapidx2j');
-const json = x2j.parse(xml_string, (err, json) => {
-  if (!err) {
-    console.log(json);
-  }
-});
-```
-
-Note that by default, rapidx2j will use 'true' as a value for empty XML tags; with config param 'empty_tag_value' one can set that to something else
-(i.e. to 'null' in this case).
-'parse_boolean_values', 'parse_int_numbers' and 'parse_float_numbers' will or will not parse XML values which are bool/int/float numbers to appropriate java script types.
-'preserve_case' will or will not preserve XML tag and attribute name case.
-'skip_parse_when_begins_with' will not parse XML values which begin with a given string to appropriate javascript types.
-'ignore_attr' will not parse any attributes.
-
-## Supported Node versions
-
- * node 4.x
- * node 5.x
- * node 6.x
- * node 8.x
- * node 9.x
- * node 10.x
- * node 11.x
- * node 12.x
- * node 14.x
- * node 15.x
-
-## Contributors
-
-* Damir Nedžibović ([@Damirn](https://github.com/damirn))
-* Sander Steenhuis ([@Redsandro](https://twitter.com/Redsandro))
-* Chris Bricker ([@NFNChris](https://github.com/NFNChris))
-* Ivan Zubok ([@akaNightmare](https://github.com/akaNightmare))
+## Fork changes
+- Support for comments parsing
+- Modified empty attr value to empty string `""`
+- Remove skip_parse_when_begins_with - didn't see use for it
+- Migrated to typescript
 
 ## License & copyright
-
-Copyright (c) 2015-2021 Damir Nedžibović
-
-Use of this software is granted under the MIT or the Boost Software License,
-to be chosen freely by the user.
-
-RapidXML is dual-licensed (MIT and Boost Software License, see LICENSE.rapidxml).
+RapidXml license is provided at [LICENSE.RapidXml](LICENSE.RapidXml). \
+Original license it provided in repo at [LICENSE](LICENSE).

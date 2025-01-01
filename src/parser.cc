@@ -20,7 +20,6 @@ struct Options {
   bool ignoreAttributes;
 
   std::string attributePrefix;
-  std::string beginsWith;
   std::string valueKey;
 
   void SaveToPersistent(Nan::AsyncWorker *worker) {
@@ -49,7 +48,7 @@ static void toLower(std::string &s)
 static v8::Local<v8::Value> parseText(const Options &options, const std::string &text)
 {
   if (text.find_first_not_of(" \t\n\r") == std::string::npos) // empty string
-    return Nan::Null();
+    return Nan::New<v8::String>(text).ToLocalChecked();
 
   std::string tmp = text;
   if (!options.preserveCase)
@@ -61,9 +60,6 @@ static v8::Local<v8::Value> parseText(const Options &options, const std::string 
     else if (tmp == "false")
       return Nan::New<v8::Boolean>(false);
   }
-
-  if (options.beginsWith.length() > 0 && text.find_first_of(options.beginsWith) == 0)
-    return Nan::New<v8::String>(text).ToLocalChecked();
 
   char *c = const_cast<char *>(text.c_str());
   if (options.parseDouble)
@@ -241,20 +237,20 @@ static bool parseArgs(const Nan::FunctionCallbackInfo<v8::Value> &args, Options 
       }
       else
         options.valueKey = "keyValue";
-      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("attr_group").ToLocalChecked()).FromMaybe(false))
-        options.groupAttributes = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("attr_group").ToLocalChecked()).ToLocalChecked()).FromJust();
+      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("group_attrs").ToLocalChecked()).FromMaybe(false))
+        options.groupAttributes = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("group_attrs").ToLocalChecked()).ToLocalChecked()).FromJust();
       else
         options.groupAttributes = false;
       if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("parse_boolean_values").ToLocalChecked()).FromMaybe(false))
         options.parseBoolean = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("parse_boolean_values").ToLocalChecked()).ToLocalChecked()).FromJust();
       else
         options.parseBoolean = true;
-      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("parse_float_numbers").ToLocalChecked()).FromMaybe(false))
-        options.parseDouble = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("parse_float_numbers").ToLocalChecked()).ToLocalChecked()).FromJust();
+      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("parse_float_values").ToLocalChecked()).FromMaybe(false))
+        options.parseDouble = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("parse_float_values").ToLocalChecked()).ToLocalChecked()).FromJust();
       else
         options.parseDouble = true;
-      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("parse_int_numbers").ToLocalChecked()).FromMaybe(false))
-        options.parseInteger = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("parse_int_numbers").ToLocalChecked()).ToLocalChecked()).FromJust();
+      if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("parse_int_values").ToLocalChecked()).FromMaybe(false))
+        options.parseInteger = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("parse_int_values").ToLocalChecked()).ToLocalChecked()).FromJust();
       else
         options.parseInteger = true;
       if (Nan::HasOwnProperty(tmp, Nan::New<v8::String>("preserve_case").ToLocalChecked()).FromMaybe(false))
@@ -269,9 +265,6 @@ static bool parseArgs(const Nan::FunctionCallbackInfo<v8::Value> &args, Options 
         options.ignoreAttributes = Nan::To<bool>(Nan::Get(tmp, Nan::New<v8::String>("ignore_attr").ToLocalChecked()).ToLocalChecked()).FromJust();
       else
         options.ignoreAttributes = false;
-      v8::Local<v8::Value> foo = Nan::Get(tmp, Nan::New("skip_parse_when_begins_with").ToLocalChecked()).ToLocalChecked();
-      Utf8ValueWrapper s(isolate, foo);
-      options.beginsWith = *s;
     }
   }
   else
@@ -285,7 +278,6 @@ static bool parseArgs(const Nan::FunctionCallbackInfo<v8::Value> &args, Options 
     options.explicitArray = false;
     options.ignoreAttributes = false;
     options.attributePrefix = "@";
-    options.beginsWith = "";
     options.valueKey = "keyValue";
   }
   return true;
